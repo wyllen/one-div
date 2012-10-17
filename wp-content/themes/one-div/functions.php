@@ -209,6 +209,42 @@ function order_popular( $query ) {
 }
 add_action( 'pre_get_posts', 'order_popular' );
 
+/* function my_tag_cloud($defaults) {
+	$args = array(
+		'smallest' => 8, 'largest' => 16, 'unit' => 'pt', 'number' => 25,
+		'format' => 'flat', 'separator' => "\n", 'orderby' => 'name', 'order' => 'ASC',
+		'exclude' => '', 'include' => '', 'link' => 'view', 'taxonomy' => 'post_tag', 'echo' => true
+	);
+	$args = wp_parse_args( $args, $defaults );
+	$tags = get_terms( $args['taxonomy'], array_merge( $args, array( 'orderby' => 'count', 'order' => 'DESC' ) ) ); // Always query top tags
+
+	if ( empty( $tags ) )
+		return;
+
+	foreach ( $tags as $key => $tag ) {
+		if ( 'edit' == $args['link'] )
+			$link = get_edit_tag_link( $tag->term_id, $args['taxonomy'] );
+		else
+			$link = get_term_link( intval($tag->term_id), $args['taxonomy'] );
+		if ( is_wp_error( $link ) )
+			return false;
+
+		$tags[ $key ]->link = $link;
+		$tags[ $key ]->id = $tag->term_id;
+	}
+
+	$return = wp_generate_tag_cloud( $tags, $args ); // Here's where those top tags get sorted according to $args
+
+	$return = apply_filters( 'my_tag_cloud', $return, $args );
+
+	if ( 'array' == $args['format'] || empty($args['echo']) )
+		return $return;
+
+	echo $return;
+}
+
+add_filter('wp_tag_cloud', 'my_tag_cloud'); */
+
 function deregister_jquery_base(){
   wp_deregister_script( 'jquery' );
  wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js');

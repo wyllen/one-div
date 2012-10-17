@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	<div id="content">
 		<?php get_sidebar(); ?>		
-archive		
 		<?php
 			if(have_posts()) : while(have_posts()) : the_post();			
 ?>	
