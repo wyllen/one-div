@@ -2,12 +2,13 @@
 	<div id="content">
 		<?php get_sidebar(); ?>	
 		
-		<?php $pictos = new WP_Query('post_type=pictos&posts_per_page=-1&order=DESC'); 
+		<?php
+		$i=0; $pictos = new WP_Query('post_type=pictos&posts_per_page=-1&order=DESC'); 
 			if($pictos->have_posts()) : while($pictos->have_posts()) : $pictos-> the_post();
 			
 ?>	
 		
-			<div class="one_div_item">
+			<div class="one_div_item <?php $i++;if($i%6== 0){echo 'endline';}?>">
 				
 				<div class="votes"><?php if(function_exists('the_ratings')) { the_ratings(); } ?></div>
 			

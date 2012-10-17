@@ -310,11 +310,134 @@ text-indent: 0px;
 font-size: 11px;
 width: 150px;
 position: absolute;
-background: white;
+background: rgba(255, 255, 255, 0.95);
 border-radius: 5px;
 z-index: 55;
 display:none;
 }
 .votes:hover  .vote-register{
 display:block;
+}
+
+
+.one_div_item.categories {
+text-align:center;
+margin-right: 65px;
+width: 140px;
+height: 103px;
+float: left;
+position:relative;
+}
+.one_div_item.categories.endline{
+margin-right:0;
+}
+
+.one_div_item.categories  .picto {
+position: relative;
+width: 140px;
+height: 80px;
+}
+
+.one_div_item.categories  .picto_wrapper {
+font-size: 15px;
+line-height: 0;
+width: 140px;
+top: 25%;
+position: absolute;
+text-align: center;
+}
+
+.power {
+z-index:2;
+margin-left: 10px;
+margin-top: -6px;
+float: left;
+position: relative;
+width: 26px;
+height: 26px;
+background: #F63D9D;
+border-radius: 100%;
+cursor:pointer;
+
+}
+.power::before {
+border: 2px solid #FF96CD;
+bottom: 15%;
+top: 15%;
+right: 15%;
+left: 15%;
+position: absolute;
+content: "";
+display: block;
+border-radius: 100%;
+-webkit-transition: all 1s linear;
+}
+.power::after {
+box-shadow: 0px 0px 0px 2px #F63D9D;
+border-radius: 20px;
+content: "";
+display: block;
+position: absolute;
+left: 47%;
+right: 47%;
+top: 9%;
+bottom: 60%;
+background: #FF96CD;
+-webkit-transition: all 1ms linear;
+}
+.power:hover::before {
+border: 2px solid white;
+}
+.power:hover::after {
+background: white;
+}
+
+.login_ajax{
+display:none;
+top: 10px;
+position: absolute;
+right: -20px;
+}
+
+.menu-menu-container {
+float: left;
+}
+.power:hover + .login_ajax {
+display:block;
+}
+.login_ajax:hover  {
+display:block;
+}
+.vote-register::after {
+left: 25px;
+bottom: -5px;
+border-left: 9px solid white;
+content: "";
+display: block;
+width: 1px;
+height: 1px;
+border-bottom: 7px solid rgba(255, 255, 255, 0);
+position: absolute;
+}
+
+#LoginWithAjax {
+margin-right: 21px;
+margin-top: 55px;
+border-radius: 10px;
+padding: 10px;
+z-index: 1;
+background: rgba(255, 255, 255, 0.95);
+box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+}
+
+#LoginWithAjax:after {
+border-top: 6px solid rgba(255, 255, 255, 0);
+right: 15px;
+top: -6px;
+position: absolute;
+width: 1px;
+content: "";
+display: block;
+height: 1px;
+border-right: 10px solid rgba(255, 255, 255, 0.95);
 }

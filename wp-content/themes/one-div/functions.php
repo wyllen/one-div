@@ -210,6 +210,7 @@ function order_popular( $query ) {
 add_action( 'pre_get_posts', 'order_popular' );
 
 function wp_title_tag_cloud_filter($return, $tags) { 
+$i=0;
 				foreach ( $tags as $key => $tag ) {					
 		
 			$args = array(
@@ -221,11 +222,14 @@ function wp_title_tag_cloud_filter($return, $tags) {
 				'order' , 'DESC'
 			);
 			$query = new WP_Query( $args );		
+			
 			if($query->have_posts()) : while($query->have_posts()) : $query->the_post();	 
+			
 			?>
-			<div class="one_div_item categories">				
+			<div class="one_div_item <?php $i++;if($i%5== 0){echo 'endline';}?> categories">				
 				<div class="picto">
-					<div class="picto_wrapper">						
+					<div class="picto_wrapper">		
+<a href="<?php echo $tag->link; ?>">					
 						<?php
 							$html= get_post_meta($query->post->ID,'_html_code',true);		
 							$html= htmlspecialchars_decode($html)	;		
@@ -240,7 +244,8 @@ function wp_title_tag_cloud_filter($return, $tags) {
 							   $css = preg_replace('/([#.])([_a-zA-Z0-9]*)([^"em";]*[{|::])/','$1${2}'.$query->post->ID.'${3}', $css);
 								echo $css;
 								?>
-						</style>						
+						</style>	
+</a>						
 					</div>
 				</div>
 			<a href="<?php echo $tag->link; ?>"><?php echo $tag->name; ?></a>
@@ -250,7 +255,11 @@ function wp_title_tag_cloud_filter($return, $tags) {
 				
 			endwhile;
 			endif;
+			
 			}
+			?>
+			<div class="clear"></div>
+			<?php
 }
 add_filter('wp_generate_tag_cloud',
   'wp_title_tag_cloud_filter', 1, 20);

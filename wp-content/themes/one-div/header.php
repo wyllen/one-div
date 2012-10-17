@@ -20,6 +20,8 @@
 		</div>
 		<nav id="header_menu">
 		<?php wp_nav_menu( array('menu' => 'Menu' )); ?>
+		<div class="power"></div>		
+		<div class="login_ajax"><?php login_with_ajax() ?></div>
 		</nav>
 		<div class="clear"></div>
 		</header>

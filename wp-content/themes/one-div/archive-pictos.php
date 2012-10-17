@@ -2,10 +2,11 @@
 	<div id="content">
 		<?php get_sidebar(); ?>			
 		<?php
+		$i=0;
 			if(have_posts()) : while(have_posts()) : the_post();			
 ?>	
 		
-			<div class="one_div_item">
+			<div class="one_div_item <?php $i++;if($i%6== 0){echo 'endline';}?>">
 				
 				<div class="votes"><?php if(function_exists('the_ratings')) { the_ratings(); } ?></div>
 				
