@@ -33,25 +33,10 @@
 						<textarea name="code_html" id="code_html_<?php echo $post->ID; ?>" style="display:none"><?php echo  $html_copy; ?></textarea>
 					</div>
 				</div>
-				<a href="" class="button_code html" id="button_html_<?php echo $post->ID; ?>">HTML</a>
-				<a href="" class="button_code css"  id="button_css_<?php echo $post->ID; ?>" >CSS</a>
+				<a href="" class="button_code html" id="button_html_<?php echo $post->ID; ?>" title="<?php echo $post->ID; ?>">HTML</a>
+				<a href="" class="button_code css"  id="button_css_<?php echo $post->ID; ?>" title="<?php echo $post->ID; ?>">CSS</a>
 				<a href="<?php bloginfo('template_url'); ?>/codes/<?php echo $post->ID ?>/<?php echo $post->ID ?>.zip" class="button_code zip">ZIP</a>
-				<script type="text/javascript">
-					$(document).ready(function(){
-						$('a#button_html_<?php echo $post->ID; ?>').zclip({
-						path:'<?php bloginfo('template_url'); ?>/js/ZeroClipboard.swf',
-						copy:$('#code_html_<?php echo $post->ID; ?>').val()
-					});
 				
-						$('a#button_css_<?php echo $post->ID; ?>').zclip({
-						path:'<?php bloginfo('template_url'); ?>/js/ZeroClipboard.swf',
-						copy:$('#code_css_<?php echo $post->ID; ?>').val()
-					});
-					// The link with ID "copy-description" will copy
-					// the text of the paragraph with ID "description"
-				
-					});
-				</script>
 			</div>
 			<?php
 			endwhile;endif;

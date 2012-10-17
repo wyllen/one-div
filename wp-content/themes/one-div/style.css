@@ -301,8 +301,9 @@ background: #F63D9D;
 }
 
 .vote-register {
-left: 7px;
-top: -52px;
+text-align: center;
+left: 5px;
+top: -32px;
 box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
 line-height: 2em;
 padding: 5px;
@@ -440,4 +441,119 @@ content: "";
 display: block;
 height: 1px;
 border-right: 10px solid rgba(255, 255, 255, 0.95);
+
+}
+#LoginWithAjax_Password input, #LoginWithAjax_Username input {
+-webkit-transition: 300ms linear;
+border-radius: 5px;
+height: 30px;
+border: none;
+background: rgba(0, 0, 0, 0.03);
+outline:none;
+text-indent:5px;
+}
+#LoginWithAjax_Password input:hover, #LoginWithAjax_Username input:hover {
+background: rgba(247, 89, 247, 0.03);
+}
+#LoginWithAjax_Password input:focus, #LoginWithAjax_Username input:focus {
+border:none;
+outline:none;
+box-shadow: inset 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+
+}
+
+#lwa_wp-submit {
+-webkit-transition: 300ms linear;
+box-shadow: 0px 5px 0px 0px #ACACAC;
+margin: 0px 10px 5px 0px;
+display: block;
+width: 100px;
+height: 50px;
+background: #E4E4E4;
+border: none;
+cursor:pointer;
+}
+
+#lwa_wp-submit:hover {
+margin-bottom: 0px;
+margin-top: 5px;
+box-shadow: 0px 0px 0px 0px #E2D2D5;
+background: #F8ECEE;
+}
+#LoginWithAjax_Links a:hover {
+font-weight: bold;
+text-shadow: 0px 1px 0px #8D7171;
+color: #E6BBC2;
+}
+
+.toggle {
+margin-left: 9px;
+vertical-align: 3px;
+font-size: 8px;
+background: #B8B8B8;
+-webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+-ms-border-radius: 1em;
+-o-border-radius: 1em;
+border-radius: 1em;
+color: white;
+display: inline-block;
+font-family: Helvetica;
+line-height: 1.666667;
+margin: 1em;
+padding: 0 1em;
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+-webkit-transition: background 120ms;
+-moz-transition: background 120ms;
+-o-transition: background 120ms;
+transition: background 120ms;
+width: 3.25em;
+}
+.toggle:before {
+  content: 'off';
+  display: block;
+  text-align: right;
+}
+#lwa_rememberme:checked ~ .toggle {
+  background: #F63D9D;
+}
+#lwa_rememberme:checked ~ .toggle:before {
+  content: 'on';
+  text-align: left;
+}
+.toggle .handle {
+  background: #f4f4f4;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #d4d4d4));
+  background: -webkit-linear-gradient(top, #f4f4f4, #d4d4d4);
+  background: -moz-linear-gradient(top, #f4f4f4, #d4d4d4);
+  background: -o-linear-gradient(top, #f4f4f4, #d4d4d4);
+  background: linear-gradient(top, #f4f4f4, #d4d4d4);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: #333333 0 0.05em 0.35em;
+  -moz-box-shadow: #333333 0 0.05em 0.35em;
+  box-shadow: #333333 0 0.05em 0.35em;
+  display: block;
+  height: 2.5em;
+  left: -10%;
+  margin-top: -1.25em;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: left 120ms;
+  -moz-transition: left 120ms;
+  -o-transition: left 120ms;
+  transition: left 120ms;
+  width: 2.5em;
+}
+#lwa_rememberme:checked ~ .toggle .handle {
+  left: 70%;
+}
+#lwa_rememberme {
+position: absolute;
+left: -99999px;
 }

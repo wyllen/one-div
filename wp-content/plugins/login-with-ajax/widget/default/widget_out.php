@@ -39,7 +39,7 @@
                         <input type="hidden" name="lwa_profile_link" value="<?php echo $lwa_data['profile_link'] ?>" />
                     </td>
                     <td id="LoginWithAjax_Links">
-                        <input name="rememberme" type="checkbox" id="lwa_rememberme" value="forever" /> <label><?php _e( 'Remember Me' ) ?></label>
+                        <input name="rememberme" type="checkbox" id="lwa_rememberme" value="forever" /><span><?php _e( 'Remember Me' ) ?></span> <label for="lwa_rememberme" class="toggle"><b class="handle"></b></label>
                         <br />
                         <a id="LoginWithAjax_Links_Remember" href="<?php echo site_url('wp-login.php?action=lostpassword', 'login') ?>" title="<?php _e('Password Lost and Found') ?>"><?php _e('Lost your password?') ?></a>
                         <?php
