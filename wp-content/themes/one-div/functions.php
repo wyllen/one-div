@@ -209,45 +209,33 @@ function order_popular( $query ) {
 }
 add_action( 'pre_get_posts', 'order_popular' );
 
-/* function my_tag_cloud($defaults) {
-	$args = array(
-		'smallest' => 8, 'largest' => 16, 'unit' => 'pt', 'number' => 25,
-		'format' => 'flat', 'separator' => "\n", 'orderby' => 'name', 'order' => 'ASC',
-		'exclude' => '', 'include' => '', 'link' => 'view', 'taxonomy' => 'post_tag', 'echo' => true
-	);
-	$args = wp_parse_args( $args, $defaults );
-	$tags = get_terms( $args['taxonomy'], array_merge( $args, array( 'orderby' => 'count', 'order' => 'DESC' ) ) ); // Always query top tags
+function wp_title_tag_cloud_filter($return, $tags) {
+ //   $pattern = '/(\d+) topics/';
 
-	if ( empty( $tags ) )
-		return;
+    echo "
+";
+    foreach ( $tags as $key => $tag ) {
+            $tag_name = $tags[ $key ]->name;
+        	$tag_title = $tags[ $key ]->name. " coupons";
+            $tag_link = $tags[ $key ]->link;
+            $term_id = $tags[ $key ]->id;
 
-	foreach ( $tags as $key => $tag ) {
-		if ( 'edit' == $args['link'] )
-			$link = get_edit_tag_link( $tag->term_id, $args['taxonomy'] );
-		else
-			$link = get_term_link( intval($tag->term_id), $args['taxonomy'] );
-		if ( is_wp_error( $link ) )
-			return false;
+        echo "
+".$tag_name."
+";
+    }
+    echo "
+";
 
-		$tags[ $key ]->link = $link;
-		$tags[ $key ]->id = $tag->term_id;
-	}
-
-	$return = wp_generate_tag_cloud( $tags, $args ); // Here's where those top tags get sorted according to $args
-
-	$return = apply_filters( 'my_tag_cloud', $return, $args );
-
-	if ( 'array' == $args['format'] || empty($args['echo']) )
-		return $return;
-
-	echo $return;
 }
-
-add_filter('wp_tag_cloud', 'my_tag_cloud'); */
+add_filter('wp_generate_tag_cloud',
+  'wp_title_tag_cloud_filter', 1, 20);
 
 function deregister_jquery_base(){
   wp_deregister_script( 'jquery' );
- wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js');
+// wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js');
+wp_register_script( 'jquery', 'http://127.0.0.1/one-div/wp-content/themes/one-div/js/jquery.min.js');
+
  wp_enqueue_script( 'jquery' );
 }
 add_action('wp_enqueue_scripts','deregister_jquery_base');
