@@ -59,9 +59,7 @@
 			
 			
 			<div class="clear"></div>
-		<?php 
-wp_tag_cloud( array( 'taxonomy' => 'pictos_categories', format => 'list' ) );
-?>
+	
 		</div>
 	
 <?php get_footer(); ?>

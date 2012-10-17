@@ -209,24 +209,48 @@ function order_popular( $query ) {
 }
 add_action( 'pre_get_posts', 'order_popular' );
 
-function wp_title_tag_cloud_filter($return, $tags) {
- //   $pattern = '/(\d+) topics/';
-
-    echo "
-";
-    foreach ( $tags as $key => $tag ) {
-            $tag_name = $tags[ $key ]->name;
-        	$tag_title = $tags[ $key ]->name. " coupons";
-            $tag_link = $tags[ $key ]->link;
-            $term_id = $tags[ $key ]->id;
-
-        echo "
-".$tag_name."
-";
-    }
-    echo "
-";
-
+function wp_title_tag_cloud_filter($return, $tags) { 
+				foreach ( $tags as $key => $tag ) {					
+		
+			$args = array(
+			'posts_per_page'=>1,
+				'post_type'=> 'pictos',
+				'pictos_categories' => $tag->name,
+				'meta_key' , 'ratings_score',
+				'orderby' , 'meta_value_num',
+				'order' , 'DESC'
+			);
+			$query = new WP_Query( $args );		
+			if($query->have_posts()) : while($query->have_posts()) : $query->the_post();	 
+			?>
+			<div class="one_div_item categories">				
+				<div class="picto">
+					<div class="picto_wrapper">						
+						<?php
+							$html= get_post_meta($query->post->ID,'_html_code',true);		
+							$html= htmlspecialchars_decode($html)	;		
+							$html_copy=$html;
+							$html = preg_replace('/([class|id])=["|\']([a-zA-Z0-9_]*)["|\']/','${1}="${2}'.$query->post->ID.'"', $html);
+						echo $html;  ?>
+						<style type="text/css">	
+						<?php $css= get_post_meta($query->post->ID,'_css_code',true); 
+								$css= str_replace("&#039;", "'", $css);
+								$css= str_replace("&quot;", "\"", $css);
+								$css_copy=$css;
+							   $css = preg_replace('/([#.])([_a-zA-Z0-9]*)([^"em";]*[{|::])/','$1${2}'.$query->post->ID.'${3}', $css);
+								echo $css;
+								?>
+						</style>						
+					</div>
+				</div>
+			<a href="<?php echo $tag->link; ?>"><?php echo $tag->name; ?></a>
+			
+				</div><?php
+				
+				
+			endwhile;
+			endif;
+			}
 }
 add_filter('wp_generate_tag_cloud',
   'wp_title_tag_cloud_filter', 1, 20);
