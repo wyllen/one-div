@@ -453,7 +453,7 @@ outline:none;
 text-indent:5px;
 }
 #LoginWithAjax_Password input:hover, #LoginWithAjax_Username input:hover {
-background: rgba(247, 89, 247, 0.03);
+background: rgba(247, 89, 247, 0.2);
 }
 #LoginWithAjax_Password input:focus, #LoginWithAjax_Username input:focus {
 border:none;
@@ -568,7 +568,7 @@ outline:none;
 text-indent:5px;
 }
 #LoginWithAjax_Register input[type="text"]:hover ,#lwa_user_remember:hover {
-background: rgba(247, 89, 247, 0.03);
+background: rgba(247, 89, 247, 0.2);
 }
 #LoginWithAjax_Register input[type="text"]:focus,#lwa_user_remember:hover {
 border:none;
