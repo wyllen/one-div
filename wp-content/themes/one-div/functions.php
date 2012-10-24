@@ -121,13 +121,43 @@ function create_zip($files = array(),$destination = '',$overwrite = true) {
 	function html($post){
 	$val = get_post_meta($post->ID,'_html_code',true);
     echo '<label for="html_code">Code HTML : </label>';
-    echo '<textarea  name="html_code" id="html_code" cols="90" rows="2">'.$val.'</textarea>';
+    echo '<textarea  name="html_code" id="html_code" cols="90" rows="2">'.$val.'</textarea>
+	
+	';
 }
 
 function css($post){
 	$val = get_post_meta($post->ID,'_css_code',true);
-    echo '<label for="css_code">Code CSS : </label>';
-    echo '<textarea name="css_code" id="css_code" cols="90" rows="20">'.$val.'</textarea>';
+    echo '<style type="text/css">#css_code {
+float: left;
+}
+.preview-wrapper {
+position:relative;
+width: 100px;
+height: 80px;
+float: left;
+border-radius: 5px;
+box-shadow: inset 0px 0px 17px 1px rgba(0, 0, 0, 0.41);
+}
+#preview-picto {
+position: relative;
+margin-top: 30%;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+height: 1px;
+width: 1px;
+}
+</style><textarea name="css_code" id="css_code" cols="90" rows="20">'.$val.'</textarea><div class="preview-wrapper">
+<div id="preview-picto"></div>
+<style type="text/css" id="preview-picto-style"></style>
+</div><div style="clear:both"></div>
+<script type="text/javascript">
+jQuery("#preview-picto").html(jQuery("#html_code").val());
+jQuery("#preview-picto-style").html(jQuery("#css_code").val());
+</script>
+
+';
 }
 
 add_action('save_post','save_metaboxes');

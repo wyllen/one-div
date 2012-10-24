@@ -1,4 +1,5 @@
 <?php get_header();
+
 if ( is_user_logged_in() ) {
 if(isset($_POST['submit'])){
  
@@ -93,9 +94,9 @@ if(isset($_POST['submit'])){
 	<?php get_sidebar();?>			
 		<form method="post" id="submitpicto" action="<?php echo site_url().'/submit'; ?>">
 		<p><?php echo isset($output) ? $output : '' ; ?></p>
-			<p><label for="title">Titre</label></p><p><input type="text" name="title" id="title" value="" /></p>
+			<p><label for="title">Title</label></p><p><input type="text" name="title" id="title" value="" /></p>
 	<p><label for="htmlcode">HTML code</label></p><p><input type="text" name="htmlcode" id="htmlcode" value="" /></p>
-	<p><label for="csscode">CSS code</label></p><p><textarea name="csscode" id="csscode" rows="10" cols="15"></textarea></p>
+	<p id="innertextcss"><label for="csscode">CSS code</label></p><p><textarea name="csscode" id="csscode" rows="10" cols="15"></textarea></p>
 	<p><label for="keywords">Tags</label></p><p><input type="text" name="keywords" id="keywords" value="" placeholder="separated by a coma"/></p>
 	<p><input type="submit" name="submit" value="submit" id="submitpictobutton" /></p>
 	
@@ -110,11 +111,16 @@ $("#htmlcode").keyup(function(){
 $("#preview-picto").html($("#htmlcode").val());
 });
 
-$("#csscode").keyup(function(){
-$("#preview-picto-style").html($("#csscode").val());
+$("html").keyup(function(){
+$("#preview-picto-style").html($(".CodeMirror")[0].innerText);
 });
 </script>
-
+<script src="<?php bloginfo('template_url'); ?>/js/codemirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/codemirror/lib/codemirror.css" type="text/css" media="screen" />
+<script src="<?php bloginfo('template_url'); ?>/js/codemirror/css.js"></script>
+ <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("csscode"), {});
+    </script>
 		</div>
 <?php  }else{ ?>
 <div id="content">

@@ -1,0 +1,37 @@
+.coeur{
+position: relative;
+display: inline-block;
+}
+.coeur::before, .coeur::after {
+position: absolute;
+content: \"\";
+left: 0em;
+width: 1em;
+height: 1.6em;
+background: red;
+-moz-border-radius: 1em 1em 0 0;
+border-radius: 1em 1em 0 0;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+-moz-transform-origin: 0 100%;
+-ms-transform-origin: 0 100%;
+-o-transform-origin: 0 100%;
+transform-origin: 0 100%;
+}
+.coeur::after {
+left: -1em;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+-moz-transform-origin: 100% 100%;
+-ms-transform-origin: 100% 100%;
+-o-transform-origin: 100% 100%;
+transform-origin: 100% 100%;
+}

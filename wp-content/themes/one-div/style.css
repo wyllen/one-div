@@ -643,15 +643,18 @@ max-width:100%;
 #submitpicto textarea,#formcontact textarea{
 min-height:200px;
 }
-#submitpicto input:hover,#submitpicto textarea:hover,#formcontact textarea:hover,#formcontact input:hover{
-background: rgba(247, 89, 247, 0.2);
+#submitpicto input:hover,#submitpicto textarea:hover,.CodeMirror:hover,#formcontact input:hover{
+background: rgba(221, 161, 221, 0.23);
 }
-#submitpicto input:focus,#submitpicto textarea:focus,#formcontact textarea:focus,#formcontact input:focus {
+#submitpicto input:focus,#submitpicto textarea:focus,#formcontact input:focus {
 border:none;
 outline:none;
 box-shadow: inset 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
-
 }
+ .CodeMirror-scroll.cm-s-default.CodeMirror-focused{
+ box-shadow: inset 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+ border-radius:5px;
+ }
 input#submitpictobutton:hover,#formcontact .wpcf7-form-control.wpcf7-submit:hover{
 color: white;
 margin-bottom: 0px;
@@ -671,17 +674,36 @@ border: none;
 cursor: pointer;
 }
 .preview {
-margin-top: 50px;
-height: 400px;
-width: 50%;
+position:relative;
+border-radius: 5px;
+box-shadow: inset 0px 0px 17px 1px rgba(0, 0, 0, 0.41);
+margin-left: 174px;
+margin-top: 66px;
+width: 100px;
+height: 80px;
 float: left;
 }
+
+.preview:hover::before {
+border-radius: 5px;
+background: #ACACAC;
+padding: 5px;
+content: 'Preview';
+position: absolute;
+top: 85px;
+left: 9px;
+}
 #preview-picto {
+position: relative;
 margin-top: 30%;
 margin-right: auto;
 margin-bottom: 0px;
 margin-left: auto;
 height: 1px;
 width: 1px;
+}
+.CodeMirror {
+border-radius: 5px;
+background: rgba(0, 0, 0, 0.03);
 }
 
