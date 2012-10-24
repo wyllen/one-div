@@ -615,3 +615,73 @@ margin-top: 10px;
 .login_ajax_content #LoginWithAjax:after {
 content:none;
 }
+
+#submitpicto {
+float: left;
+margin-top: 50px;
+margin-bottom: 50px;
+width: 50%;
+}
+#formcontact {
+width:50%;
+margin-top:50px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:50px;
+}
+#submitpicto input, #submitpicto textarea,#formcontact input, #formcontact textarea{
+-webkit-transition: 300ms linear;
+border-radius: 5px;
+height: 30px;
+border: none;
+background: rgba(0, 0, 0, 0.03);
+outline:none;
+text-indent:5px;
+width:100%;
+max-width:100%;
+}
+#submitpicto textarea,#formcontact textarea{
+min-height:200px;
+}
+#submitpicto input:hover,#submitpicto textarea:hover,#formcontact textarea:hover,#formcontact input:hover{
+background: rgba(247, 89, 247, 0.2);
+}
+#submitpicto input:focus,#submitpicto textarea:focus,#formcontact textarea:focus,#formcontact input:focus {
+border:none;
+outline:none;
+box-shadow: inset 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+
+}
+input#submitpictobutton:hover,#formcontact .wpcf7-form-control.wpcf7-submit:hover{
+color: white;
+margin-bottom: 0px;
+margin-top: 25px;
+box-shadow: 0px 0px 0px 0px #E2D2D5;
+background: #F63D9D;
+}
+input#submitpictobutton,#formcontact .wpcf7-form-control.wpcf7-submit {
+-webkit-transition: 300ms linear;
+box-shadow: 0px 5px 0px 0px #ACACAC;
+margin: 20px 10px 5px 0px;
+display: block;
+width: 100%;
+height: 50px;
+background: #E4E4E4;
+border: none;
+cursor: pointer;
+}
+.preview {
+margin-top: 50px;
+height: 400px;
+width: 50%;
+float: left;
+}
+#preview-picto {
+margin-top: 30%;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+height: 1px;
+width: 1px;
+}
+

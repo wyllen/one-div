@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	
 	if(empty($_POST['title'])){
 		$err['status'] = false;
-		$err['msg'][] = 'Le champ "Titre" ne peut être vide.';
+		$err['msg'][] = 'Title is empty!';
 	}
 	if(empty($_POST['htmlcode'])){
 		$err['status'] = false;
@@ -91,14 +91,30 @@ if(isset($_POST['submit'])){
  ?>
 	<div id="content">
 	<?php get_sidebar();?>			
-		<form method="post" action="<?php echo site_url().'/submit'; ?>">
-			<p><label for="title">Titre</label><input type="text" name="title" id="title" value="" /></p>
-	<p><label for="htmlcode">HTML code</label><textarea name="htmlcode" id="htmlcode" rows="10" cols="15"></textarea></p>
-	<p><label for="csscode">CSS code</label><textarea name="csscode" id="csscode" rows="10" cols="15"></textarea></p>
-	<p><label for="keywords">Tags</label><input type="text" name="keywords" id="keywords" value="" />&nbsp;( séparez les mots clés par des virgules )</p>
-	<p><input type="submit" name="submit" value="enregistrer" /></p>
+		<form method="post" id="submitpicto" action="<?php echo site_url().'/submit'; ?>">
+		<p><?php echo isset($output) ? $output : '' ; ?></p>
+			<p><label for="title">Titre</label></p><p><input type="text" name="title" id="title" value="" /></p>
+	<p><label for="htmlcode">HTML code</label></p><p><input type="text" name="htmlcode" id="htmlcode" value="" /></p>
+	<p><label for="csscode">CSS code</label></p><p><textarea name="csscode" id="csscode" rows="10" cols="15"></textarea></p>
+	<p><label for="keywords">Tags</label></p><p><input type="text" name="keywords" id="keywords" value="" placeholder="separated by a coma"/></p>
+	<p><input type="submit" name="submit" value="submit" id="submitpictobutton" /></p>
+	
 </form>
-<p><?php echo isset($output) ? $output : '' ; ?></p>
+<div class="preview">
+<div id="preview-picto"></div>
+<style type="text/css" id="preview-picto-style"></style>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+$("#htmlcode").keyup(function(){
+$("#preview-picto").html($("#htmlcode").val());
+});
+
+$("#csscode").keyup(function(){
+$("#preview-picto-style").html($("#csscode").val());
+});
+</script>
+
 		</div>
 <?php  }else{ ?>
 <div id="content">
