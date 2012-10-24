@@ -119,6 +119,7 @@ display: inline-block;
 }
 
 #content{
+padding-top: 1px;
 position:relative;
 width:960px;
 margin:0 auto;
@@ -598,4 +599,19 @@ cursor: pointer;
 height: auto;
 }
 
-
+.login_ajax_content {
+width: 450px;
+margin-top: 50px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+}
+.login_ajax_content p{
+text-align:center;
+}
+.login_ajax_content #LoginWithAjax {
+margin-top: 10px;
+}
+.login_ajax_content #LoginWithAjax:after {
+content:none;
+}
