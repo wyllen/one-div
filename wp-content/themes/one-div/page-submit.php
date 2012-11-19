@@ -112,7 +112,7 @@ $("#preview-picto").html($("#htmlcode").val());
 });
 
 $("html").keyup(function(){
-$("#preview-picto-style").html($(".CodeMirror")[0].innerText);
+$("#preview-picto-style").html($(".CodeMirror-lines")[0].innerText);
 });
 </script>
 <script src="<?php bloginfo('template_url'); ?>/js/codemirror/lib/codemirror.js"></script>

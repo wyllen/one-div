@@ -138,10 +138,21 @@ margin-right:0;
 }
 
 .one_div_item .picto {
+text-align: center;
 position: relative;
 width: 100px;
 height: 80px;
 }
+
+.picto::before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -0.25em;
+}
+
+
 .button_code {
 -webkit-transition: 100ms linear;
 box-shadow: 0px 2px 0px 0px #6F6F6F;
@@ -169,12 +180,8 @@ color:#f63d9d;
 box-shadow:inset 0px 2px 2px 2px #000;
 }
 .picto_wrapper {
-font-size: 15px;
-line-height: 0;
-width: 100px;
-top: 25%;
-position: absolute;
-text-align: center;
+display: inline-block;
+vertical-align: middle;
 }
 
 #content_menu {
@@ -674,17 +681,26 @@ border: none;
 cursor: pointer;
 }
 .preview {
-position:relative;
 border-radius: 5px;
 box-shadow: inset 0px 0px 17px 1px rgba(0, 0, 0, 0.41);
-margin-left: 174px;
+margin-left: 490px;
 margin-top: 66px;
+text-align: center;
+position: relative;
 width: 100px;
 height: 80px;
-float: left;
 }
 
-.preview:hover::before {
+.preview::before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -0.25em;
+}
+
+.preview:hover::after {
+height: 16px;
 border-radius: 5px;
 background: #ACACAC;
 padding: 5px;
@@ -694,13 +710,8 @@ top: 85px;
 left: 9px;
 }
 #preview-picto {
-position: relative;
-margin-top: 30%;
-margin-right: auto;
-margin-bottom: 0px;
-margin-left: auto;
-height: 1px;
-width: 1px;
+display: inline-block;
+vertical-align: middle;
 }
 .CodeMirror {
 border-radius: 5px;
