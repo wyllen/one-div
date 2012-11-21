@@ -1,0 +1,30 @@
+.triforce {
+    border-bottom: 1.5em solid #2C2C2C;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    display: inline-block;
+    height: 0;
+    left: 50%;
+    margin: -1.5em -1em;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+.triforce:after,
+.triforce:before {
+    border-bottom: 1.5em solid #2C2C2C;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    content: \'\';
+    height: 0;
+    position: absolute;
+    top: 1.5em;
+    width: 0;
+}
+.triforce:after {
+    left: 0;
+}
+.triforce:before {
+    right: 0;
+}

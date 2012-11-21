@@ -1,0 +1,30 @@
+.mglass {
+	left: 63%;
+	margin: -1em;
+	position: absolute;
+	top: 75%;
+	display: inline-block;
+	width: 1.5em;
+	height: 0.5em;
+	background-color: #2C2C2C;
+
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	border-bottom-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+}
+
+.mglass::before {
+	border: 0.4em solid #2C2C2C;
+	content: \"\";
+	position: absolute;
+	top: -0.84em;
+	left: -1.7em;
+	display: block;
+	width: 1.3em;
+	height: 1.3em;
+	border-radius: 50%;
+}

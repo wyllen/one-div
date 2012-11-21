@@ -1,0 +1,29 @@
+.mug {
+background-image: -webkit-linear-gradient(transparent 33%, #2C2C2C 33%);
+background-image: -moz-linear-gradient(transparent 33%, #2C2C2C 33%);
+background-image: -o-linear-gradient(transparent 33%, #2C2C2C 33%);
+background-image: -ms-linear-gradient(transparent 33%, #2C2C2C 33%);
+background-image: linear-gradient(transparent 33%, #2C2C2C 33%);
+
+    border: .25em solid #2C2C2C;
+    border-radius: 0 0 .25em .25em;
+    display: inline-block;
+    height: 2.5em;
+    left: 50%;
+    margin: -1.5em -.75em;
+    position: absolute;
+    top: 50%;
+    width: 1.5em;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+.mug:after {
+    border: .25em solid #2C2C2C;
+    border-right: none;
+    border-radius: .75em 0 0 .75em;
+    content: \'\';
+    height: 1.5em;
+    left: -1em;
+    position: absolute;
+    top: .25em;
+    width: .75em;
+}

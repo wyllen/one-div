@@ -1,0 +1,49 @@
+.ghost {
+	background-image: -webkit-linear-gradient(45deg, transparent 50%, #2C2C2C 50%), -webkit-linear-gradient(135deg, transparent 50%, #2C2C2C 50%), -webkit-linear-gradient(#2C2C2C 50%, #2C2C2C 50%);
+	background-image: -moz-linear-gradient(45deg, transparent 50%, #2C2C2C 50%), -moz-linear-gradient(135deg, transparent 50%, #2C2C2C 50%), -moz-linear-gradient(#2C2C2C 50%, #2C2C2C 50%);
+	background-image: -o-linear-gradient(45deg, transparent 50%, #2C2C2C 50%), -o-linear-gradient(135deg, transparent 50%, #2C2C2C 50%), -o-linear-gradient(#2C2C2C 50%, #2C2C2C 50%);
+	background-image: -ms-linear-gradient(45deg, transparent 50%, #2C2C2C 50%), -ms-linear-gradient(135deg, transparent 50%, #2C2C2C 50%), -ms-linear-gradient(#2C2C2C 50%, #2C2C2C 50%);
+	background-image: linear-gradient(45deg, transparent 50%, #2C2C2C 50%), linear-gradient(135deg, transparent 50%, #2C2C2C 50%), linear-gradient(#2C2C2C 50%, #2C2C2C 50%);
+	background-position: 50% 100%, 50% 100%, 50% 0;
+	background-repeat: repeat-x;
+
+	-webkit-background-size: 1em 1em;
+	-moz-background-size: 1em 1em;
+	background-size: 1em 1em;
+	display: inline-block;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 -1.5em;
+	position: absolute;
+	top: 50%;
+	width: 3em;
+	-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+
+.ghost:after,.ghost:before {
+	background-image: -webkit-radial-gradient(transparent 35%, #2C2C2C 35%);
+	background-image: -moz-radial-gradient(transparent 35%, #2C2C2C 35%);
+	background-image: -o-radial-gradient(transparent 35%, #2C2C2C 35%);
+	background-image: -ms-radial-gradient(transparent 35%, #2C2C2C 35%);
+	background-image: radial-gradient(transparent 35%, #2C2C2C 35%);
+	border-top: .5em solid #2C2C2C;
+	content: \'\';
+	height: 1em;
+	position: absolute;
+	top: -1.5em;
+	width: 1em;
+}
+
+.ghost:after {
+	background-position: 75% 75%;
+	border-left: .5em solid #2C2C2C;
+	border-radius: 3em 0 0 0;
+	left: 0;
+}
+
+.ghost:before {
+	background-position: 0% 100%;
+	border-right: .5em solid #2C2C2C;
+	border-radius: 0 3em 0 0;
+	right: 0;
+}

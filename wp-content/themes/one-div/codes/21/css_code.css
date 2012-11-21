@@ -1,12 +1,20 @@
-.coeur{
-height: 26px;
-position: relative;
+.heart {
+position: absolute;
+top: 0em;
+left: 0;
 display: inline-block;
+width: 1em;
+height: 1em;
+cursor: pointer;
+font-size: 24px;
+-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
 }
-.coeur::before, .coeur::after {
+
+.heart::before, .heart::after {
 position: absolute;
 content: \"\";
-left: 0em;
+left: 2em;
+top: 1em;
 width: 1em;
 height: 1.6em;
 background: #2C2C2C;
@@ -23,8 +31,10 @@ transform: rotate(-45deg);
 -o-transform-origin: 0 100%;
 transform-origin: 0 100%;
 }
-.coeur::after {
-left: -1em;
+
+
+.heart::after {
+left: 1.04em;
 -webkit-transform: rotate(45deg);
 -moz-transform: rotate(45deg);
 -ms-transform: rotate(45deg);

@@ -1,0 +1,22 @@
+.comment {
+font-size: 20px;
+width: 2em;
+height: 1.5em;
+background: #2C2C2C;
+border-radius: 0.2em;
+position: relative;
+-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+
+.comment::before {
+	position:absolute;	
+	content: \"\";
+	bottom: -0.3em;
+	right: 0.4em;
+	width:0em;
+	height:0em;
+	border-bottom:0.4em solid transparent;
+	border-left:0.4em solid #2C2C2C;
+
+	
+}

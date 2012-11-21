@@ -1,37 +1,23 @@
-.coeur{
-position: relative;
-display: inline-block;
+.home {
+left: 50%;
+top: 60%;
+box-shadow: 0em -0.8em 0em 0em #2C2C2C,0.4em -1.0em 0em 0em #2C2C2C,-0.4em -0.85em 0em 0em #2C2C2C,0.5em -0.8em 0em 0em #2C2C2C,-0.5em -1.0em 0em 0em #2C2C2C,-0.2em 0em 0em 0em #2C2C2C,-0.5em 0em 0em 0em #2C2C2C,0.4em 0em 0em 0em #2C2C2C,0.2em -0.2em 0em 0em #2C2C2C,0.7em -0.3em 0em 0em #2C2C2C,0.7em -0em 0em 0em #2C2C2C,0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.3em 0em 0em #2C2C2C,-0.7em 0em 0em 0em #2C2C2C;
+width: 0.4em;
+height: 0.8em;
+position: absolute;
+-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
 }
-.coeur::before, .coeur::after {
+
+.home::before {
+	border-left: 1.3em solid transparent;
 position: absolute;
 content: \"\";
-left: 0em;
-width: 1em;
-height: 1.6em;
-background: red;
--moz-border-radius: 1em 1em 0 0;
-border-radius: 1em 1em 0 0;
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transform-origin: 0 100%;
--moz-transform-origin: 0 100%;
--ms-transform-origin: 0 100%;
--o-transform-origin: 0 100%;
-transform-origin: 0 100%;
-}
-.coeur::after {
-left: -1em;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--ms-transform: rotate(45deg);
--o-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transform-origin: 100% 100%;
--moz-transform-origin: 100% 100%;
--ms-transform-origin: 100% 100%;
--o-transform-origin: 100% 100%;
-transform-origin: 100% 100%;
+top: -1.6em;
+right: -1.06em;
+width: 0em;
+height: 0em;
+border-right: 1.3em solid transparent;
+border-bottom: 1.1em solid #2C2C2C;
+
+	
 }

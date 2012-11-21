@@ -132,21 +132,25 @@ function css($post){
 float: left;
 }
 .preview-wrapper {
-position:relative;
-width: 100px;
-height: 80px;
-float: left;
 border-radius: 5px;
 box-shadow: inset 0px 0px 17px 1px rgba(0, 0, 0, 0.41);
+margin-left: 490px;
+margin-top: 66px;
+text-align: center;
+position: relative;
+width: 100px;
+height: 80px;
+}
+.preview-wrapper::before {
+content: \'\';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -0.25em;
 }
 #preview-picto {
-position: relative;
-margin-top: 30%;
-margin-right: auto;
-margin-bottom: 0px;
-margin-left: auto;
-height: 1px;
-width: 1px;
+display: inline-block;
+vertical-align: middle;
 }
 </style><textarea name="css_code" id="css_code" cols="90" rows="20">'.$val.'</textarea><div class="preview-wrapper">
 <div id="preview-picto"></div>

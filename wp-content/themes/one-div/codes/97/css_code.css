@@ -1,0 +1,29 @@
+.file {
+font-size: 16px;
+border-top: 0.2em solid #2C2C2C;
+position: relative;
+width: 1em;
+height: 2em;
+border-right: 0.2em solid #2C2C2C;
+border-bottom: 0.2em solid #2C2C2C;
+-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+
+.file::before {
+bottom: -0.2em;
+left: -0.5em;
+position: absolute;
+width: 0.5em;
+height: 1.72em;
+border-left: 0.2em solid #2C2C2C;
+border-bottom: 0.2em solid #2C2C2C;
+content: \"\";
+}
+.file::after {
+top: -0.2em;
+left: -0.50em;
+position: absolute;
+border-right: 0.5em solid #2C2C2C;
+border-top: 0.5em solid transparent;
+content: \"\";
+}

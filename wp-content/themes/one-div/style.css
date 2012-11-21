@@ -145,13 +145,12 @@ height: 80px;
 }
 
 .picto::before {
+margin-right: -11px;
 content: '';
 display: inline-block;
 height: 100%;
 vertical-align: middle;
-margin-right: -0.25em;
 }
-
 
 .button_code {
 -webkit-transition: 100ms linear;

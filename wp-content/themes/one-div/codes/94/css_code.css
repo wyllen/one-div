@@ -1,0 +1,40 @@
+.star {
+	font-size: 19px;
+	position: relative;
+	border-left: 1.382em solid transparent;
+	border-right: 1.382em solid transparent;
+	border-top: 1em solid #2C2C2C;
+	-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+}
+
+.star::before {
+	left: -1.45em;
+	top: -1.04em;
+	content: \'\';
+	position: absolute;
+	border-left: 1.382em solid transparent;
+	border-right: 1.382em solid transparent;
+	border-top: 1em solid #2C2C2C;
+
+	-webkit-transform: rotate(72deg);
+	-moz-transform: rotate(72deg);
+	-o-transform: rotate(72deg);
+	-ms-transform: rotate(72deg);
+	transform: rotate(72deg);
+}
+
+.star::after {
+	left: -1.35em;
+	top: -1.04em;
+	content: \'\';
+	position: absolute;
+	border-left: 1.382em solid transparent;
+	border-right: 1.382em solid transparent;
+	border-top: 1em solid #2C2C2C;
+
+	-webkit-transform: rotate(-72deg);
+	-moz-transform: rotate(-72deg);
+	-o-transform: rotate(-72deg);
+	-ms-transform: rotate(-72deg);
+	transform: rotate(-72deg);
+}
