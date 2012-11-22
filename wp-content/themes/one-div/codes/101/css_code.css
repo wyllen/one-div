@@ -1,0 +1,20 @@
+.lock {
+margin-top: 0.8em;
+border-radius: 0.3em;
+box-shadow: inset 0.9em 0.8em 0 0 #2C2C2C,inset -0.9em 0.8em 0 0 #2C2C2C,inset 0em -0.4em 0 0 #2C2C2C;
+font-size: 18px;
+width: 2em;
+height: 1.8em;
+position: relative;
+}
+.lock::before {
+left: 1.4em;
+border-radius: 1em 1em 0 0;
+top: -0.8em;
+position: absolute;
+width: 0.8em;
+content: \"\";
+height: 0.8em;
+border: 0.3em solid #2C2C2C;
+border-bottom: none;
+}

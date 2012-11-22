@@ -1,0 +1,38 @@
+.rss{
+margin-left: -1em;
+margin-top: 1.8em;
+border-radius: 100%;
+background: #2C2C2C;
+font-size: 16px;
+width: 0.5em;
+height: 0.5em;
+position: relative;
+}
+.rss::before {
+-webkit-transform: rotate(-45deg);
+top: -1em;
+left: -1.5em;
+border-radius: 100%;
+position: absolute;
+width: 2em;
+content: \"\";
+height: 2em;
+border-left: 0.5em solid transparent;
+border-bottom: 0.5em solid transparent;
+border-top: 0.5em solid transparent;
+border-right: 0.5em solid #2C2C2C;
+}
+.rss::after {
+-webkit-transform: rotate(-45deg);
+top: -2em;
+left: -2.5em;
+border-radius: 100%;
+position: absolute;
+width: 4em;
+content: \"\";
+height: 4em;
+border-left: 0.5em solid transparent;
+border-bottom: 0.5em solid transparent;
+border-top: 0.5em solid transparent;
+border-right: 0.5em solid #2C2C2C;
+}

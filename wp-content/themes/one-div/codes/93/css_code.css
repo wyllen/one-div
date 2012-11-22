@@ -1,23 +1,23 @@
 .home {
-left: 50%;
-top: 60%;
-box-shadow: 0em -0.8em 0em 0em #2C2C2C,0.4em -1.0em 0em 0em #2C2C2C,-0.4em -0.85em 0em 0em #2C2C2C,0.5em -0.8em 0em 0em #2C2C2C,-0.5em -1.0em 0em 0em #2C2C2C,-0.2em 0em 0em 0em #2C2C2C,-0.5em 0em 0em 0em #2C2C2C,0.4em 0em 0em 0em #2C2C2C,0.2em -0.2em 0em 0em #2C2C2C,0.7em -0.3em 0em 0em #2C2C2C,0.7em -0em 0em 0em #2C2C2C,0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.3em 0em 0em #2C2C2C,-0.7em 0em 0em 0em #2C2C2C;
-width: 0.4em;
-height: 0.8em;
-position: absolute;
--webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+	left: 50%;
+	top: 60%;
+
+	-webkit-box-shadow: 0em -0.8em 0em 0em #2C2C2C,0.4em -1.0em 0em 0em #2C2C2C,-0.4em -0.8em 0em 0em #2C2C2C,0.5em -0.8em 0em 0em #2C2C2C,-0.5em -1.0em 0em 0em #2C2C2C,-0.2em 0em 0em 0em #2C2C2C,-0.5em 0em 0em 0em #2C2C2C,0.4em 0em 0em 0em #2C2C2C,0.2em -0.2em 0em 0em #2C2C2C,0.7em -0.3em 0em 0em #2C2C2C,0.7em -0em 0em 0em #2C2C2C,0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.3em 0em 0em #2C2C2C,-0.7em 0em 0em 0em #2C2C2C;
+box-shadow: 0em -0.8em 0em 0em #2C2C2C,0.4em -1.0em 0em 0em #2C2C2C,-0.4em -0.8em 0em 0em #2C2C2C,0.5em -0.8em 0em 0em #2C2C2C,-0.5em -1.0em 0em 0em #2C2C2C,-0.2em 0em 0em 0em #2C2C2C,-0.5em 0em 0em 0em #2C2C2C,0.4em 0em 0em 0em #2C2C2C,0.2em -0.2em 0em 0em #2C2C2C,0.7em -0.3em 0em 0em #2C2C2C,0.7em -0em 0em 0em #2C2C2C,0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.7em 0em 0em #2C2C2C,-0.7em -0.3em 0em 0em #2C2C2C,-0.7em 0em 0em 0em #2C2C2C;
+	width: 0.4em;
+	height: 0.8em;
+	position: absolute;
+	-webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
 }
 
 .home::before {
 	border-left: 1.3em solid transparent;
-position: absolute;
-content: \"\";
-top: -1.6em;
-right: -1.06em;
-width: 0em;
-height: 0em;
-border-right: 1.3em solid transparent;
-border-bottom: 1.1em solid #2C2C2C;
-
-	
+	position: absolute;
+	content: \"\";
+	top: -1.6em;
+	right: -1.06em;
+	width: 0em;
+	height: 0em;
+	border-right: 1.3em solid transparent;
+	border-bottom: 1.1em solid #2C2C2C;
 }
